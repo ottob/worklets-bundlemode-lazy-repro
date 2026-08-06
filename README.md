@@ -96,3 +96,7 @@ Two things look separable here:
 
 Production `expo export` emits a single bundle with no async chunks, so shipped apps are
 unaffected — but the affected screen is impossible to open during development.
+
+---
+
+Filed upstream: https://github.com/software-mansion/react-native-reanimated/issues/10162
