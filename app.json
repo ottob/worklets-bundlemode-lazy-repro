@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "worklets-bundlemode-lazy-repro",
+    "slug": "worklets-bundlemode-lazy-repro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.workletsbundlemodelazyrepro"
+    },
+    "android": {
+      "package": "com.example.workletsbundlemodelazyrepro"
+    }
+  }
+}
