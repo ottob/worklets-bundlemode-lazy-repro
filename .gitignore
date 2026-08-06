@@ -4,3 +4,4 @@ dist/
 npm-debug.*
 *.orig.*
 .DS_Store
+ISSUE.md
