@@ -69,9 +69,10 @@ module's reachability changed.
 ## Why it aborts instead of showing a red box
 
 `WorkletRuntime::runSync(const jsi::Function&, ...)` only wraps the call in `callGuarded`
-under `#ifndef NDEBUG` (`Common/cpp/worklets/WorkletRuntime/WorkletRuntime.h`). Expo Go and
-release dev-clients are built with `NDEBUG`, so the `jsi::JSError` propagates out of the
-`CADisplayLink` callback with no handler and hits `std::terminate`.
+under `#ifndef NDEBUG` (`Common/cpp/worklets/WorkletRuntime/WorkletRuntime.h`). Expo Go is
+built with `NDEBUG`, so the `jsi::JSError` propagates out of the `CADisplayLink` callback
+with no handler and hits `std::terminate`. Only Expo Go was tested here; any other `NDEBUG`
+build should behave the same, but that isn't verified.
 
 `AnimationFrameBatchinator::flush()` is the entry point here because Reanimated drives its
 mapper loop and animation steps from `requestAnimationFrame` on the UI runtime
